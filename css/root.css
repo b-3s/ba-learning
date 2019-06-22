@@ -1,0 +1,25 @@
+
+#containerOne {
+	margin-top: 30px;
+}
+
+
+
+/*media queries*/
+@media only screen and (max-width: 576px) {
+
+
+	.navbar {
+		position: absolute;
+		z-index: 100;
+		width: 100vw;
+	}
+
+	#containerOne {
+		margin-top: 60px;
+	}
+
+
+
+
+} 
