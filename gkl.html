@@ -51,8 +51,15 @@
 
       <!-- todo form -->
 
-      <form action="/action_page.php">
-<!--         <div class="form-group">
+
+      <form action="php/upload.php" method="post" enctype="multipart/form-data">
+        Select file to upload:
+        <input type="file" name="fileToUpload" id="fileToUpload">
+        <input type="submit" value="Upload Image" name="submit">
+      </form>
+
+      <!-- <form action="/upload_page.php" name="uploadForm" enctype="multipart/form-data">
+        <div class="form-group">
           <label for="file">file:</label>
           <input type="file" class="form-control" id="file">
         </div> -->
@@ -63,7 +70,7 @@
           <label for="file">file:</label>
           
           <div class="custom-file">
-            <input type="file" class="custom-file-input" id="file">
+            <input type="file" class="custom-file-input" id="file" name="uploadFile">
             <label class="custom-file-label" for="file">Choose file</label>
           </div>
         </div>
@@ -82,7 +89,7 @@
           <input type="description" class="form-control" id="description">
         </div>
         <button type="submit" class="btn btn-primary">upload</button>
-      </form> 
+      </form>  -->
       
     
       <hr class="d-sm-none">
