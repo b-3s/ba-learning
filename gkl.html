@@ -8,6 +8,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="js/form.js"></script>
   <link rel="stylesheet" href="css/root.css">
   <style>
   .fakeimg {
@@ -46,36 +47,23 @@
 <div class="container" id="containerOne">
   <div class="row">
     <div class="col-sm-4">
-      <h4>upload:</h4>
+      <!-- <h4>upload:</h4> -->
       
 
-      <!-- todo form -->
+      <!-- upload form -->
 
-
-      <form action="php/upload.php" method="post" enctype="multipart/form-data">
-        Select file to upload:
-        <input type="file" name="fileToUpload" id="fileToUpload">
-        <input type="submit" value="Upload Image" name="submit">
-      </form>
-
-      <!-- <form action="/upload_page.php" name="uploadForm" enctype="multipart/form-data">
-        <div class="form-group">
-          <label for="file">file:</label>
-          <input type="file" class="form-control" id="file">
-        </div> -->
-
-
-        <div class="form-group">
-          
-          <label for="file">file:</label>
-          
+      <form action="php/simpleUpload.php" method="post" enctype="multipart/form-data">
+       
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+          </div>
           <div class="custom-file">
-            <input type="file" class="custom-file-input" id="file" name="uploadFile">
-            <label class="custom-file-label" for="file">Choose file</label>
+            <input type="file" class="custom-file-input" name="fileToUpload" id="fileToUpload" aria-describedby="inputGroupFileAddon01">
+            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
           </div>
         </div>
-
-
+ 
         <div class="form-group">
           <label for="topic">topic:</label>
           <input type="topic" class="form-control" id="topic">
@@ -89,13 +77,14 @@
           <input type="description" class="form-control" id="description">
         </div>
         <button type="submit" class="btn btn-primary">upload</button>
-      </form>  -->
+      
+      </form>
       
     
       <hr class="d-sm-none">
     </div>
     <div class="col-sm-8">
-      <h2>GKL</h2>
+      <h2 id="topicTitle">GKL</h2>
       <h5>Title description, Dec 7, 2017</h5>
       <div class="fakeimg">Fake Image</div>
       <p>Some text..</p>

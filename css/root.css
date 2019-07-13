@@ -6,8 +6,29 @@
 
 
 /*media queries*/
-@media only screen and (max-width: 576px) {
 
+@media only screen and (min-width: 768px) {
+
+	#containerOne {
+		max-width: 960px;
+	}
+
+}
+
+@media only screen and (max-width: 768px) {
+
+	#containerOne {
+		margin-top: 30px;
+		max-width: 720px;
+	}
+
+}
+
+
+
+
+
+@media only screen and (max-width: 576px) {
 
 	.navbar {
 		position: absolute;
@@ -16,10 +37,6 @@
 	}
 
 	#containerOne {
-		margin-top: 60px;
+		margin-top: 80px;
 	}
-
-
-
-
 } 
