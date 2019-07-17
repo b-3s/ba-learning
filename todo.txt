@@ -1,0 +1,5 @@
+﻿todo:
+
+- make sure file will only be uploaded when not already in db or folder
+- show files on appropriate page
+- make files deletable (only for admin?)

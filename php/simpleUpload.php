@@ -4,6 +4,9 @@
 // $_FILES verwenden.
 
 $topic = $_POST['topic'];
+if ($topic === "AS-MBA"){
+	$topic = "asmba";
+}
 
 $uploaddir = 'uploads/' . $topic . '/';
 $uploadfile = $uploaddir . basename($_FILES['fileToUpload']['name']);
@@ -27,6 +30,8 @@ echo "<br>";
 print_r($_POST['author']);
 echo "<br>";
 print_r($_POST['description']);
+echo "<br>";
+print_r ("\$topic: $topic");
 echo "<br>";
 
 // $topic = $_POST['topic'];
@@ -60,7 +65,7 @@ if ($conn->connect_error) {
 }
 // echo "Connected successfully";
 
-$sql = "INSERT INTO GKL (filename, ptah, author, description)
+$sql = "INSERT INTO $topic (filename, ptah, author, description)
 VALUES ('$fileToUpload', '$uploaddir', '$author', '$description')";
 
 
