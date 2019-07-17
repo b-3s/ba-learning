@@ -3,7 +3,9 @@
 // In PHP kleiner als 4.1.0 sollten Sie $HTTP_POST_FILES anstatt 
 // $_FILES verwenden.
 
-$uploaddir = 'uploads/gkl/';
+$topic = $_POST['topic'];
+
+$uploaddir = 'uploads/' . $topic . '/';
 $uploadfile = $uploaddir . basename($_FILES['fileToUpload']['name']);
 
 echo '<pre>';
@@ -18,17 +20,22 @@ print_r($_FILES);
 
 
 echo "<br>";
-print_r($uploadfile);
+print_r ($uploadfile);
 echo "<br>";
 print_r($_POST['topic']);
 echo "<br>";
 print_r($_POST['author']);
 echo "<br>";
 print_r($_POST['description']);
+echo "<br>";
 
-$topic = $_POST['topic'];
+// $topic = $_POST['topic'];
 $author = $_POST['author'];
 $description = $_POST['description'];
+$fileToUpload = basename($uploadfile);
+
+echo "<br>";
+print_r ($fileToUpload);
 
 print "</pre>";
 
@@ -54,7 +61,7 @@ if ($conn->connect_error) {
 // echo "Connected successfully";
 
 $sql = "INSERT INTO GKL (filename, ptah, author, description)
-VALUES ('superfile', 'uploads/gkl/', '$author', '$description')";
+VALUES ('$fileToUpload', 'uploads/gkl/', '$author', '$description')";
 
 
 
