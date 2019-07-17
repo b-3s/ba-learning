@@ -61,7 +61,7 @@ if ($conn->connect_error) {
 // echo "Connected successfully";
 
 $sql = "INSERT INTO GKL (filename, ptah, author, description)
-VALUES ('$fileToUpload', 'uploads/gkl/', '$author', '$description')";
+VALUES ('$fileToUpload', '$uploaddir', '$author', '$description')";
 
 
 
