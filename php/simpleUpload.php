@@ -65,10 +65,22 @@ if ($conn->connect_error) {
 }
 // echo "Connected successfully";
 
+// check whether the file is already in db
+$sqllook = "SELECT * FROM $topic WHERE filename = '$fileToUpload'";
+$result = $conn->query($sqllook);
+if ($result->num_rows > 0) {  // todo prepared statement
+    print_r ("\$sqllook: $sqllook");
+    echo "is schon vorhanden";
+} else {
+    echo "we can go on - file nicht vorhanden";
+    echo "<br>";
+}
+// echo $sqllook;
+
+
+// insert into table
 $sql = "INSERT INTO $topic (filename, ptah, author, description)
 VALUES ('$fileToUpload', '$uploaddir', '$author', '$description')";
-
-
 
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
