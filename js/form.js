@@ -17,6 +17,11 @@ $(document).ready(function(){
         $(".custom-file-label").html("<b>" + fileName + "</b>");
     });
 
+    $("#submit").click(function(){
+    	$("#theContent").empty();
+    	alert("yes");
+    });
+
     /* end upload form ----------------------------------------  */
 
 
