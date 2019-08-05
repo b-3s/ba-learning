@@ -17,13 +17,52 @@ $(document).ready(function(){
         $(".custom-file-label").html("<b>" + fileName + "</b>");
     });
 
+
+    // submit upload form
     $("#submit").click(function(){
-    	$("#theContent").empty();
-    	alert("yes");
+    	alert ("val: " + $("#author").val());
+    	var formdata = new FormData();
+    	formdata.append("fileToUpload", fileToUpload.files[0]);
+    	formdata.append("topic", $("#topic").val());
+    	formdata.append("author", $("#author").val());
+    	formdata.append("description", $("#description").val());
+    	var request = new XMLHttpRequest();
+		request.open("POST", "http://localhost/ba-learning/php/pdoUpload.php", true);
+		request.onload = function(oEvent) {
+	        if (request.status == 200) {
+	      		$("#topicTitle").text("uploaded!!");
+	      		alert("uploaded");
+	    	} else {
+	    		alert("not working");
+	      		$("#topicTitle").text("Error " + request.status + " occurred when trying to upload your file.<br \/>");
+	    	};
+  		};
+		request.send(formData);
+    	// $("#theContent").empty();
+
     });
 
     /* end upload form ----------------------------------------  */
 
 
 
-});
+
+    /* on page load: fetch appropriate content from server */
+    function loadContent(){
+
+    	let topicToLoad = $("#topicTitle").text();
+    	alert (topicToLoad);
+    	$.ajax({
+    	 	type:"POST",
+    	 	url: "php/results.php",
+    	 	data: {topic: topicToLoad},
+    	 	success: function(result){
+    		$("#theContent").html(result);
+  		}});
+    }
+
+    loadContent();
+    /*------------------------------------------------------*/
+
+
+});;

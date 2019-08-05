@@ -32,13 +32,13 @@
   <div class="collapse navbar-collapse" id="collapsibleNavbar">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" href="gkp.html">GKP</a>
+        <a class="nav-link" href="gkp.php">GKP</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="gkl.html">GKL</a>
+        <a class="nav-link" href="gkl.php">GKL</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="as-mba.html">AS-MBA</a>
+        <a class="nav-link" href="as-mba.php">AS-MBA</a>
       </li>
     </ul>
   </div>
@@ -52,7 +52,7 @@
 
       <!-- upload form -->
        <!-- action="php/pdoUpload.php" -->
-      <!-- <form action="php/pdoUpload.php" method="post" enctype="multipart/form-data"> -->
+      <form>
 
         <div class="input-group mb-3">
           <div class="input-group-prepend">
@@ -83,7 +83,7 @@
         </div>
         <button type="submit" name="submit" id="submit" class="btn btn-primary">upload</button>
 
-      <!-- </form> -->
+      </form>
 
 
       <hr class="d-sm-none">
