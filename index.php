@@ -89,11 +89,13 @@
       <hr class="d-sm-none">
     </div>
     <div class="col-sm-8">
-      <h2 id="topicTitle">GKL</h2>
+      <h2 id="topicTitle">INDEX</h2>
+      <div id="dataFiles">
+        Hier können sie die verschiedenen Skripte zum jeweiligen Thema uploaden bzw. downloaden...
+
+      </div>
       <!-- show appropriate Files on page-->
-      <?php
-        include ("php/loadApprFiles.php");
-      ?>
+
 
 
       <br>
