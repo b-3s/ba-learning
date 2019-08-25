@@ -1,7 +1,6 @@
 
 <?php 
-// In PHP kleiner als 4.1.0 sollten Sie $HTTP_POST_FILES anstatt 
-// $_FILES verwenden.
+
 
 $alreadyStored = true;
 
