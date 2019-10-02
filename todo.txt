@@ -2,4 +2,15 @@
 
 - make sure file will only be uploaded when not already in db or folder
 - show files on appropriate page
+----------------------------------------------------------------------
+
+
+- fileupload - ALERT BOX if file is already in db or folder
+
+- upload with ajax call - page will be updated...
+
 - make files deletable (only for admin?)
+
+- create new page?
+
+- security (htmlspecialchars + prepared statements ...)

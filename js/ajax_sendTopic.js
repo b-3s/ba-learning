@@ -1,7 +1,9 @@
-$(document).ready(function(){
+
+
+function sendTopic(){
 
 	let topictopic = $("#topicTitle").html();
-	//alert (topictopic);
+	alert ("in sendTopic " + topictopic);
 
 	$.ajax({
 	  	method: "POST",
@@ -14,4 +16,4 @@ $(document).ready(function(){
 
 
 
-});
+};

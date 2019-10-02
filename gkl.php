@@ -8,8 +8,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="js/form.js"></script>
   <script src="js/ajax_sendTopic.js"></script>
+  <script src="js/form.js"></script>
   <link rel="stylesheet" href="css/root.css">
   <style>
   .fakeimg {
@@ -52,8 +52,8 @@
       
 
       <!-- upload form -->
-
-      <form action="php/simpleUpload_2.php" method="post" enctype="multipart/form-data">
+      <!-- action="php/pdoUpload.php" -->
+      <form method="post" enctype="multipart/form-data">
        
         <div class="input-group mb-3">
           <div class="input-group-prepend">
@@ -82,7 +82,7 @@
           <label for="description">description:</label>
           <textarea type="description" class="form-control" id="description" name="description" rows="3" maxlength="254"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">upload</button>
+        <button type="submit" id="submit" class="btn btn-primary">upload</button>
       
       </form>
       
