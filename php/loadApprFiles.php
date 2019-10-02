@@ -24,13 +24,34 @@ try
 
 	$rueckgabe = $dbh->query($sqllookup);
 	$ergebnis = $rueckgabe->fetchAll(PDO::FETCH_ASSOC);
-	// ausgabe der files
 	
+	// ausgabe der files
+	print '<table class="table table-striped">';
+	print '<thead>';
+	print '<tr>';
+	print '<th scope="col">description</th>';
+	print '<th scope="col">file</th>';
+	print '</tr>';
+	print '</thead>';
+	print '<tbody>';
 	foreach ($ergebnis as $inhalt) {
-		print $inhalt['description']."  -  ";
+		print '<tr>';
+		print '<td>';
+		print $inhalt['description'];
+		print '</td>';
+		print '<td>';
 		print "<a href=\"php/uploads/".$pageTopic."/".$inhalt['filename']."\"".">".$inhalt['filename']."</a><br>";
-		
+		print '</td>';
+		print '</tr>';
 	}
+	print '</tbody>';
+	print '</table>';
+	
+	// foreach ($ergebnis as $inhalt) {
+	// 	print $inhalt['description']."  -  ";
+	// 	print "<a href=\"php/uploads/".$pageTopic."/".$inhalt['filename']."\"".">".$inhalt['filename']."</a><br>";
+		
+	// }
 
 
 	$dbh = null; 

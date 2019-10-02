@@ -3,7 +3,7 @@
 function sendTopic(){
 
 	let topictopic = $("#topicTitle").html();
-	alert ("in sendTopic " + topictopic);
+	// alert ("in sendTopic " + topictopic);
 
 	$.ajax({
 	  	method: "POST",

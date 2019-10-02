@@ -5,6 +5,9 @@
 ----------------------------------------------------------------------
 
 
+
+- style file-representation in #dataFiles
+
 - fileupload - ALERT BOX if file is already in db or folder
 
 - upload with ajax call - page will be updated...

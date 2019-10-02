@@ -48,10 +48,43 @@
 <div class="container" id="containerOne">
   <div class="row">
     <div class="col-sm-4">
-      <h4>upload:</h4>
+      <!-- <h4>upload:</h4> -->
       
 
-      <!-- todo -->
+      <!-- upload form -->
+      <!-- action="php/pdoUpload.php" -->
+      <form method="post" enctype="multipart/form-data">
+       
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+          </div>
+          <div class="custom-file">
+            <input type="file" class="custom-file-input" name="fileToUpload" id="fileToUpload" aria-describedby="inputGroupFileAddon01">
+            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+          </div>
+        </div>
+ 
+        <div class="form-group">
+          <label for="topic">topic:</label>
+          <select name="topic" id="topic" class="form-control">
+            <option value="GKP" selected>GKP</option>
+            <option value="GKL">GKL</option>
+            <option value="AS-MBA">AS-MBA</option>
+          </select>
+          <!-- <input type="topic" class="form-control" id="topic" name="topic"> -->
+        </div>
+        <div class="form-group">
+          <label for="author">author:</label>
+          <input type="author" class="form-control" id="author" name="author">
+        </div>
+        <div class="form-group">
+          <label for="description">description:</label>
+          <textarea type="description" class="form-control" id="description" name="description" rows="3" maxlength="254"></textarea>
+        </div>
+        <button type="submit" id="submit" class="btn btn-primary">upload</button>
+      
+      </form>
       
       
       <hr class="d-sm-none">
