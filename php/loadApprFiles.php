@@ -11,7 +11,7 @@ if ($pageTopic === "AS-MBA"){
 
 
 //SQL Query - show appropriate files
-$sqllookup = "SELECT filename, description FROM $pageTopic";
+$sqllookup = "SELECT author, filename, description FROM $pageTopic";
 
 
 
@@ -29,6 +29,7 @@ try
 	print '<table class="table table-striped">';
 	print '<thead>';
 	print '<tr>';
+	print '<th scope="col">author</th>';
 	print '<th scope="col">description</th>';
 	print '<th scope="col">file</th>';
 	print '</tr>';
@@ -36,6 +37,9 @@ try
 	print '<tbody>';
 	foreach ($ergebnis as $inhalt) {
 		print '<tr>';
+		print '<td>';
+		print $inhalt['author'];
+		print '</td>';
 		print '<td>';
 		print $inhalt['description'];
 		print '</td>';
