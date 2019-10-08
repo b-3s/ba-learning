@@ -48,8 +48,20 @@
 <div class="container" id="containerOne">
   <div class="row">
     <div class="col-sm-4">
+    
+      <!-- SEARCH form -->
+      <form method="post" enctype="multipart/form-data">
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Search topic or description" aria-label="Recipient's username" aria-describedby="button-addon2">
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="search_btn">Search</button>
+          </div>
+        </div>
+      </form>
+
+
       <!-- <h4>upload:</h4> -->
-      
+     
 
       <!-- upload form -->
       <!-- action="php/pdoUpload.php" -->
