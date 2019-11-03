@@ -42,14 +42,6 @@
 		max-width: 720px;
 	}
 
-}
-
-
-
-
-
-@media only screen and (max-width: 576px) {
-
 	.navbar {
 		position: absolute;
 		z-index: 100;
@@ -59,4 +51,7 @@
 	#containerOne {
 		margin-top: 80px;
 	}
-} 
+
+}
+
+

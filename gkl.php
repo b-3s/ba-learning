@@ -47,7 +47,7 @@
 
 <div class="container" id="containerOne">
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-md-4">
     
       <!-- SEARCH form -->
       <form method="post" enctype="multipart/form-data">
@@ -99,9 +99,9 @@
       </form>
       
     
-      <hr class="d-sm-none">
+      <hr class="d-md-none">
     </div>
-    <div class="col-sm-8">
+    <div class="col-md-8">
       <h2 id="topicTitle">GKL</h2>
       <div id="dataFiles"></div>
       <!-- show appropriate Files on page-->

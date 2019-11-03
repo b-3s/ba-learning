@@ -25,7 +25,7 @@
   <p>share your skills with your classmates...</p> 
 </div>
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
   <a class="navbar-brand" href="#">categories:</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
@@ -47,7 +47,7 @@
 
 <div class="container" id="containerOne">
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-md-4">
       <!-- <h4>upload:</h4> -->
       
 
@@ -87,9 +87,9 @@
       </form>
       
       
-      <hr class="d-sm-none">
+      <hr class="d-md-none">
     </div>
-    <div class="col-sm-8">
+    <div class="col-md-8">
       <h2 id="topicTitle">AS-MBA</h2>
       <div id="dataFiles"></div>
       <!-- show appropriate Files on page-->

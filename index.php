@@ -46,7 +46,7 @@
 
 <div class="container" id="containerOne">
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-md-4">
       <!-- <h4>upload:</h4> -->
       
 
@@ -86,9 +86,9 @@
       </form>
       
     
-      <hr class="d-sm-none">
+      <hr class="d-md-none">
     </div>
-    <div class="col-sm-8">
+    <div class="col-md-8">
       <h2 id="topicTitle">INDEX</h2>
       <div id="dataFiles">
         Hier können sie die verschiedenen Skripte zum jeweiligen Thema uploaden bzw. downloaden...

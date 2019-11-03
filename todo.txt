@@ -5,6 +5,7 @@
 ----------------------------------------------------------------------
 
 
+- screenwidth <768: search form and upload form in modal
 
 - fileupload - ALERT BOX if file is already in db or folder
 
