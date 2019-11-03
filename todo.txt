@@ -7,6 +7,8 @@
 
 - screenwidth <768: search form and upload form in modal
 
+- upload-form -> check whether form is properly filled in
+
 - fileupload - ALERT BOX if file is already in db or folder
 
 - upload with ajax call - page will be updated...
