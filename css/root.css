@@ -12,6 +12,18 @@
 }
 
 
+/*dataFiles table*/
+#dataFiles a {
+	font-weight: bold;
+	color: #606a75;
+
+}
+
+#dataFiles a:hover {
+	text-decoration: none;
+	color: #343a40;
+}
+
 
 /*media queries*/
 
