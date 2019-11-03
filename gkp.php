@@ -10,6 +10,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="js/form.js"></script>
   <script src="js/ajax_sendTopic.js"></script>
+  <script src="js/manipulation.js"></script>
   <link rel="stylesheet" href="css/root.css">
   <style>
   .fakeimg {
@@ -47,7 +48,7 @@
 
 <div class="container" id="containerOne">
   <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4" id="searchUpload">
       <!-- <h4>upload:</h4> -->
       
 
@@ -85,6 +86,18 @@
         <button type="submit" id="submit" class="btn btn-primary">upload</button>
       
       </form>
+
+       <!-- search and upload button - show if screenwidth > 768 -->
+      <div class="row" id="smallWidthButtons">
+        <div class="col-6">
+          <button type="button" id="uploadBtn" class="btn btn-primary btn-lg btn-block">Upload</button>
+          
+        </div>
+        <div class="col-6">
+          <button type="button" id="searchBtn" class="btn btn-primary btn-lg btn-block">Search</button>
+          
+        </div>
+      </div>
       
       
       <hr class="d-md-none">
