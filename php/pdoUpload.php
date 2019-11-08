@@ -106,7 +106,6 @@ function uploadFile(){
         echo "Datei ist valide und wurde erfolgreich hochgeladen.\n";
     } else {
         header ("Location: http://localhost/ba-learning/index.php");
-        echo "Möglicherweise eine Dateiupload-Attacke!\n";
     }
 
     // echo "<br> Weitere Debugging Informationen:";

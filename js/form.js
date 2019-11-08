@@ -18,8 +18,9 @@ $(document).ready(function(){
     });
 
 
-    // submit upload form
+    // submit upload form  ----------------------------------------------------------------------
     $("#submit").click(function(e){
+        // alert("yeah in submit anonymous function");
         e.preventDefault();
      //    alert ("topic: " + $("#topic").val());
     	// alert ("author: " + $("#author").val());
@@ -44,6 +45,35 @@ $(document).ready(function(){
   		};
 		request.send(formdata);
 
+    });
+
+    // MODAL submit upload form  ------------------------------------------------------------------
+    $("#md-submit").click(function(e){
+        // alert("yeah in MD-submit anonymous function");
+        e.preventDefault();
+        // alert ("topic: " + $("#md-topic").val());
+        // alert ("author: " + $("#md-author").val());
+        // alert ("description: " + $("#md-description").val());
+        // alert ("fileToUpload.files[0].name: " + md_fileToUpload.files[0].name);
+        var formdata = new FormData();
+        formdata.append("fileToUpload", md_fileToUpload.files[0]);
+        formdata.append("topic", $("#md-topic").val());
+        formdata.append("author", $("#md-author").val());
+        formdata.append("description", $("#md-description").val());
+        // alert(formdata);
+        var request = new XMLHttpRequest();
+        request.open("POST", "php/pdoUpload.php", true);
+        request.onload = function(oEvent) {
+            if (request.status == 200) {
+                sendTopic();
+                // $("#topicTitle").text("uploaded!!");
+            } else {
+                // alert("not working");
+                $("#topicTitle").text("Error " + request.status + " occurred when trying to upload your file.<br \/>");
+            };
+        };
+        request.send(formdata);
+        $('#uploadModal').modal('toggle');
     });
 
     // defined in ajax_sendTopic.js --> send topic to server, get pagecontent and show it in #dataFiles

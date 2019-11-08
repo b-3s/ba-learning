@@ -151,14 +151,14 @@
               <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
             </div>
             <div class="custom-file">
-              <input type="file" class="custom-file-input" name="fileToUpload" id="fileToUpload" aria-describedby="inputGroupFileAddon01">
+              <input type="file" class="custom-file-input" name="md_fileToUpload" id="md_fileToUpload" aria-describedby="inputGroupFileAddon01">
               <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
             </div>
           </div>
 
           <div class="form-group">
             <label for="topic">topic:</label>
-            <select name="topic" id="topic" class="form-control">
+            <select name="topic" id="md-topic" class="form-control">
               <option value="GKP">GKP</option>
               <option value="GKL" selected>GKL</option>
               <option value="AS-MBA">AS-MBA</option>
@@ -167,13 +167,13 @@
           </div>
           <div class="form-group">
             <label for="author">author:</label>
-            <input type="author" class="form-control" id="author" name="author">
+            <input type="author" class="form-control" id="md-author" name="author">
           </div>
           <div class="form-group">
             <label for="description">description:</label>
-            <textarea type="description" class="form-control" id="description" name="description" rows="3" maxlength="254"></textarea>
+            <textarea type="description" class="form-control" id="md-description" name="description" rows="3" maxlength="254"></textarea>
           </div>
-          <button type="submit" id="submit" class="btn btn-primary">upload</button>
+          <button type="submit" id="md-submit" class="btn btn-primary">upload</button>
 
         </form>
 
