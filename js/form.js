@@ -28,7 +28,7 @@ $(document).ready(function(){
     	formdata.append("description", $("#description").val());
     	alert(formdata);
     	var request = new XMLHttpRequest();
-		request.open("POST", "http://localhost/ba-learning/php/pdoUpload.php", true);
+		request.open("POST", "php/pdoUpload.php", true);
 		request.onload = function(oEvent) {
 	        if (request.status == 200) {
 	      		$("#topicTitle").text("uploaded!!");

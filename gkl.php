@@ -142,40 +142,40 @@
       </div>
       <div class="modal-body">
         
-        <!-- upload form -->
-      <!-- action="php/pdoUpload.php" -->
-      <form method="post" enctype="multipart/form-data">
-       
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+          <!-- upload form -->
+        <!-- action="php/pdoUpload.php" -->
+        <form method="post" enctype="multipart/form-data">
+         
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+            </div>
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" name="fileToUpload" id="fileToUpload" aria-describedby="inputGroupFileAddon01">
+              <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+            </div>
           </div>
-          <div class="custom-file">
-            <input type="file" class="custom-file-input" name="fileToUpload" id="fileToUpload" aria-describedby="inputGroupFileAddon01">
-            <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+   
+          <div class="form-group">
+            <label for="topic">topic:</label>
+            <select name="topic" id="topic" class="form-control">
+              <option value="GKP">GKP</option>
+              <option value="GKL" selected>GKL</option>
+              <option value="AS-MBA">AS-MBA</option>
+            </select>
+            <!-- <input type="topic" class="form-control" id="topic" name="topic"> -->
           </div>
-        </div>
- 
-        <div class="form-group">
-          <label for="topic">topic:</label>
-          <select name="topic" id="topic" class="form-control">
-            <option value="GKP">GKP</option>
-            <option value="GKL" selected>GKL</option>
-            <option value="AS-MBA">AS-MBA</option>
-          </select>
-          <!-- <input type="topic" class="form-control" id="topic" name="topic"> -->
-        </div>
-        <div class="form-group">
-          <label for="author">author:</label>
-          <input type="author" class="form-control" id="author" name="author">
-        </div>
-        <div class="form-group">
-          <label for="description">description:</label>
-          <textarea type="description" class="form-control" id="description" name="description" rows="3" maxlength="254"></textarea>
-        </div>
-        <button type="submit" id="submit" class="btn btn-primary">upload</button>
-      
-      </form>
+          <div class="form-group">
+            <label for="author">author:</label>
+            <input type="author" class="form-control" id="author" name="author">
+          </div>
+          <div class="form-group">
+            <label for="description">description:</label>
+            <textarea type="description" class="form-control" id="description" name="description" rows="3" maxlength="254"></textarea>
+          </div>
+          <button type="submit" id="submit" class="btn btn-primary">upload</button>
+        
+        </form>
 
       </div>
       <div class="modal-footer">
