@@ -45,6 +45,7 @@ $conn = new PDO("mysql:host=localhost; dbname=ba-learning-db", $username, $passw
 // Check connection
 $error = $conn->errorInfo();
 if ($error[0] > 0) {
+    header ("Location: http://localhost/ba-learning/index.php");
     print "Fehlercode: " .$error[1]."<br>".$error[2];
 }
 
@@ -104,6 +105,7 @@ function uploadFile(){
     if (move_uploaded_file($_FILES['fileToUpload']['tmp_name'], $uploadfile)) {
         echo "Datei ist valide und wurde erfolgreich hochgeladen.\n";
     } else {
+        header ("Location: http://localhost/ba-learning/index.php");
         echo "Möglicherweise eine Dateiupload-Attacke!\n";
     }
 

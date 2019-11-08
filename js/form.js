@@ -19,27 +19,30 @@ $(document).ready(function(){
 
 
     // submit upload form
-    $("#submit").click(function(){
-    	alert ("val: " + $("#author").val());
+    $("#submit").click(function(e){
+        e.preventDefault();
+     //    alert ("topic: " + $("#topic").val());
+    	// alert ("author: " + $("#author").val());
+     //    alert ("description: " + $("#description").val());
+     //    alert ("fileToUpload.files[0].name: " + fileToUpload.files[0].name);
     	var formdata = new FormData();
     	formdata.append("fileToUpload", fileToUpload.files[0]);
     	formdata.append("topic", $("#topic").val());
     	formdata.append("author", $("#author").val());
     	formdata.append("description", $("#description").val());
-    	alert(formdata);
+    	// alert(formdata);
     	var request = new XMLHttpRequest();
 		request.open("POST", "php/pdoUpload.php", true);
 		request.onload = function(oEvent) {
 	        if (request.status == 200) {
-	      		$("#topicTitle").text("uploaded!!");
-	      		alert("uploaded");
+	      		sendTopic();
+	      		// $("#topicTitle").text("uploaded!!");
 	    	} else {
-	    		alert("not working");
+	    		// alert("not working");
 	      		$("#topicTitle").text("Error " + request.status + " occurred when trying to upload your file.<br \/>");
 	    	};
   		};
 		request.send(formdata);
-    	
 
     });
 

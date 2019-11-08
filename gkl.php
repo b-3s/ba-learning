@@ -8,8 +8,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="js/ajax_sendTopic.js"></script>
   <script src="js/form.js"></script>
+  <script src="js/ajax_sendTopic.js"></script>
   <script src="js/manipulation.js"></script>
   <link rel="stylesheet" href="css/root.css">
   <style>
@@ -23,7 +23,7 @@
 
 <div class="jumbotron text-center" style="margin-bottom:0">
   <h1>BA - learning</h1>
-  <p>share your skills with your classmates...</p> 
+  <p>share your skills with your classmates...</p>
 </div>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -41,15 +41,15 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="as-mba.php">AS-MBA</a>
-      </li>    
+      </li>
     </ul>
-  </div>  
+  </div>
 </nav>
 
 <div class="container" id="containerOne">
   <div class="row">
     <div class="col-md-4" id="searchUpload">
-    
+
       <!-- SEARCH form -->
       <form method="post" enctype="multipart/form-data">
         <div class="input-group mb-3">
@@ -62,12 +62,12 @@
 
 
       <!-- <h4>upload:</h4> -->
-     
+
 
       <!-- upload form -->
       <!-- action="php/pdoUpload.php" -->
       <form method="post" enctype="multipart/form-data">
-       
+
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
@@ -77,7 +77,7 @@
             <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
           </div>
         </div>
- 
+
         <div class="form-group">
           <label for="topic">topic:</label>
           <select name="topic" id="topic" class="form-control">
@@ -96,22 +96,22 @@
           <textarea type="description" class="form-control" id="description" name="description" rows="3" maxlength="254"></textarea>
         </div>
         <button type="submit" id="submit" class="btn btn-primary">upload</button>
-      
+
       </form>
 
        <!-- ------------------- search and upload button - show if screenwidth > 768 ------------------------  -->
       <div class="row" id="smallWidthButtons">
         <div class="col-6">
           <button type="button" id="uploadBtn" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#uploadModal">Upload</button>
-          
+
         </div>
         <div class="col-6">
           <button type="button" id="searchBtn" class="btn btn-primary btn-lg btn-block">Search</button>
-          
+
         </div>
       </div>
-      
-    
+
+
       <hr class="d-md-none">
     </div>
     <div class="col-md-8">
@@ -122,7 +122,7 @@
 
 
       <br>
-     
+
     </div>
   </div>
 </div>
@@ -141,11 +141,11 @@
         </button>
       </div>
       <div class="modal-body">
-        
+
           <!-- upload form -->
         <!-- action="php/pdoUpload.php" -->
         <form method="post" enctype="multipart/form-data">
-         
+
           <div class="input-group mb-3">
             <div class="input-group-prepend">
               <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
@@ -155,7 +155,7 @@
               <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
             </div>
           </div>
-   
+
           <div class="form-group">
             <label for="topic">topic:</label>
             <select name="topic" id="topic" class="form-control">
@@ -174,7 +174,7 @@
             <textarea type="description" class="form-control" id="description" name="description" rows="3" maxlength="254"></textarea>
           </div>
           <button type="submit" id="submit" class="btn btn-primary">upload</button>
-        
+
         </form>
 
       </div>
