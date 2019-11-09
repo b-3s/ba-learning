@@ -131,59 +131,62 @@
 <!-- ---------------------------- the Modals ---------------------------------------------- -->
 
 <!-- Modal -->
-<div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Upload Files:</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
+<div id="modalContent">
+  <div class="modal fade" id="uploadModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Upload Files:</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
 
-          <!-- upload form -->
-        <!-- action="php/pdoUpload.php" -->
-        <form method="post" enctype="multipart/form-data">
+            <!-- upload form -->
+          <!-- action="php/pdoUpload.php" -->
+          <form method="post" enctype="multipart/form-data">
 
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+              </div>
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" name="md_fileToUpload" id="md_fileToUpload" aria-describedby="inputGroupFileAddon01">
+                <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+              </div>
             </div>
-            <div class="custom-file">
-              <input type="file" class="custom-file-input" name="md_fileToUpload" id="md_fileToUpload" aria-describedby="inputGroupFileAddon01">
-              <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+
+            <div class="form-group">
+              <label for="topic">topic:</label>
+              <select name="topic" id="md-topic" class="form-control">
+                <option value="GKP">GKP</option>
+                <option value="GKL" selected>GKL</option>
+                <option value="AS-MBA">AS-MBA</option>
+              </select>
+              <!-- <input type="topic" class="form-control" id="topic" name="topic"> -->
             </div>
-          </div>
+            <div class="form-group">
+              <label for="author">author:</label>
+              <input type="author" class="form-control" id="md-author" name="author">
+            </div>
+            <div class="form-group">
+              <label for="description">description:</label>
+              <textarea type="description" class="form-control" id="md-description" name="description" rows="3" maxlength="254"></textarea>
+            </div>
+            <button type="submit" id="md-submit" class="btn btn-primary">upload</button>
 
-          <div class="form-group">
-            <label for="topic">topic:</label>
-            <select name="topic" id="md-topic" class="form-control">
-              <option value="GKP">GKP</option>
-              <option value="GKL" selected>GKL</option>
-              <option value="AS-MBA">AS-MBA</option>
-            </select>
-            <!-- <input type="topic" class="form-control" id="topic" name="topic"> -->
-          </div>
-          <div class="form-group">
-            <label for="author">author:</label>
-            <input type="author" class="form-control" id="md-author" name="author">
-          </div>
-          <div class="form-group">
-            <label for="description">description:</label>
-            <textarea type="description" class="form-control" id="md-description" name="description" rows="3" maxlength="254"></textarea>
-          </div>
-          <button type="submit" id="md-submit" class="btn btn-primary">upload</button>
+          </form>
 
-        </form>
+        </div>
+        <div class="modal-footer">
 
-      </div>
-      <div class="modal-footer">
-
+        </div>
       </div>
     </div>
   </div>
 </div>
+
 <!-- --------------------------- END OF MODALS ----------------------------------------------- -->
 
 <div class="jumbotron text-center" style="margin-bottom:0">
