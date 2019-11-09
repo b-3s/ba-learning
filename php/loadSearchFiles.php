@@ -13,7 +13,7 @@ if ($pageTopic === "AS-MBA"){
 
 
 //SQL Query - show appropriate files
-$sqllookup = "SELECT author, description, filename FROM $pageTopic Where description = '$searchTopic'";
+$sqllookup = "SELECT author, description, filename FROM $pageTopic Where description LIKE LOWER ('%$searchTopic%')";
 
 
 
