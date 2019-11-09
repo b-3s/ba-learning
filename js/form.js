@@ -18,6 +18,13 @@ $(document).ready(function(){
     });
 
 
+    // empty form input fields
+    function emptyFormInput(){
+        $("form input, form textarea").val("");
+        $(".custom-file-label").html("");
+    }
+
+
     // submit upload form  ----------------------------------------------------------------------
     $("#submit").click(function(e){
         // alert("yeah in submit anonymous function");
@@ -44,7 +51,7 @@ $(document).ready(function(){
 	    	};
   		};
 		request.send(formdata);
-
+        emptyFormInput();
     });
 
     // MODAL submit upload form  ------------------------------------------------------------------
@@ -73,6 +80,7 @@ $(document).ready(function(){
             };
         };
         request.send(formdata);
+        emptyFormInput();
         $('#uploadModal').modal('toggle');
     });
 
