@@ -6,6 +6,8 @@
 - search form function
 ----------------------------------------------------------------------
 
+- embed search form function on all sites
+
 - upload-form -> check whether form is properly filled in
 
 - screenwidth <768: search form and upload form in modal
