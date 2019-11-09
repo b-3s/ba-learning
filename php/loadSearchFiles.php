@@ -7,15 +7,9 @@ if ($pageTopic === "AS-MBA"){
 	$pageTopic = "asmba";
 }
 
-// echo "<h1>";
-// echo "$pageTopic";
-// echo "</h1>";
 
-
-//SQL Query - show appropriate files
+//SQL Query - show appropriate search files
 $sqllookup = "SELECT author, description, filename FROM $pageTopic Where description LIKE LOWER ('%$searchTopic%')";
-
-
 
 
 // Verbindung aufnehmen
@@ -52,13 +46,6 @@ try
 	}
 	print '</tbody>';
 	print '</table>';
-
-	// foreach ($ergebnis as $inhalt) {
-	// 	print $inhalt['description']."  -  ";
-	// 	print "<a href=\"php/uploads/".$pageTopic."/".$inhalt['filename']."\"".">".$inhalt['filename']."</a><br>";
-
-	// }
-
 
 	$dbh = null;
 }

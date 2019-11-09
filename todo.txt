@@ -3,11 +3,10 @@
 - make sure file will only be uploaded when not already in db or folder
 - show files on appropriate page
 - upload with ajax call - page will be updated...
+- search form function
 ----------------------------------------------------------------------
 
 - upload-form -> check whether form is properly filled in
-
-- search form function
 
 - screenwidth <768: search form and upload form in modal
 

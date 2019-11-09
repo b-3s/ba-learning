@@ -21,19 +21,22 @@ function sendTopic(){
 // triggered by search_btn
 function sendSearchTopic(){
 
-	alert ("searchInput: " + $("#searchInput").val());
-	let topictopic = $("#topicTitle").html();
-	let searchInput = $("#searchInput").val();
-	// alert ("in sendTopic " + topictopic);
+	if($("#searchInput").val() != ""){
+		// alert ("searchInput: " + $("#searchInput").val());
+		let topictopic = $("#topicTitle").html();
+		let searchInput = $("#searchInput").val();
 
-	$.ajax({
-	  	method: "POST",
-	  	url: "php/loadSearchFiles.php",
-	  	data: { topics: topictopic,	searchTopic: searchInput},
-	   	success: function(result){
-	    	$("#dataFiles").html(result);
-	 	}
-	});
+		$.ajax({
+		  	method: "POST",
+		  	url: "php/loadSearchFiles.php",
+		  	data: { topics: topictopic,	searchTopic: searchInput},
+		   	success: function(result){
+		    	$("#dataFiles").html(result);
+		 	}
+		});
+	}else{
+		alert ("No Search topic or description selected! Try Again!");
+	}
 
 
 
