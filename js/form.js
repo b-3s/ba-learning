@@ -90,6 +90,10 @@ $(document).ready(function(){
     /* end upload form ----------------------------------------  */
 
 
-
+    // submit search form  ----------------------------------------------------------------------
+    $("#search_btn").click(function(e){
+        e.preventDefault();
+        sendSearchTopic();
+    });
 
 });

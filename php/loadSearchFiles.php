@@ -1,5 +1,7 @@
 <?php
 
+$searchTopic = $_POST['searchTopic'];
+
 $pageTopic = $_POST['topics'];
 if ($pageTopic === "AS-MBA"){
 	$pageTopic = "asmba";
@@ -11,7 +13,7 @@ if ($pageTopic === "AS-MBA"){
 
 
 //SQL Query - show appropriate files
-$sqllookup = "SELECT author, filename, description FROM $pageTopic";
+$sqllookup = "SELECT author, description, filename FROM $pageTopic Where description = '$searchTopic'";
 
 
 

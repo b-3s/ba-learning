@@ -53,7 +53,7 @@
       <!-- SEARCH form -->
       <form method="post" enctype="multipart/form-data">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Search topic or description" aria-label="Recipient's username" aria-describedby="button-addon2">
+          <input type="text" class="form-control" placeholder="Search topic or description" aria-label="Recipient's username" aria-describedby="button-addon2" id="searchInput">
           <div class="input-group-append">
             <button class="btn btn-outline-secondary" type="button" id="search_btn">Search</button>
           </div>
@@ -99,7 +99,7 @@
 
       </form>
 
-       <!-- ------------------- search and upload button - show if screenwidth > 768 ------------------------  -->
+       <!-- ------------------- search and upload button - show if screenwidth < 768 ------------------------  -->
       <div class="row" id="smallWidthButtons">
         <div class="col-6">
           <button type="button" id="uploadBtn" class="btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#uploadModal">Upload</button>
