@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/root.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="js/form.js"></script>
   <script src="js/manipulation.js"></script>
-  <link rel="stylesheet" href="css/root.css">
   <style>
   .fakeimg {
     height: 200px;
@@ -22,7 +22,7 @@
 
 <div class="jumbotron text-center" style="margin-bottom:0">
   <h1>BA - learning</h1>
-  <p>share your skills with your classmates...</p> 
+  <p>share your skills with your classmates...</p>
 </div>
 
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -40,21 +40,21 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="as-mba.php">AS-MBA</a>
-      </li>    
+      </li>
     </ul>
-  </div>  
+  </div>
 </nav>
 
 <div class="container" id="containerOne">
   <div class="row">
     <div class="col-md-4" id="searchUpload">
       <!-- <h4>upload:</h4> -->
-      
+
 
       <!-- upload form -->
 
       <form action="php/simpleUpload_2.php" method="post" enctype="multipart/form-data">
-       
+
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
@@ -64,7 +64,7 @@
             <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
           </div>
         </div>
- 
+
         <div class="form-group">
           <label for="topic">topic:</label>
           <select name="topic" id="topic" class="form-control">
@@ -83,21 +83,21 @@
           <textarea type="description" class="form-control" id="description" name="description" rows="3" maxlength="254"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">upload</button>
-      
+
       </form>
-      
+
       <!-- search and upload button - show if screenwidth > 768 -->
       <div class="row" id="smallWidthButtons">
         <div class="col-6">
           <button type="button" id="uploadBtn" class="btn btn-primary btn-lg btn-block">Upload</button>
-          
+
         </div>
         <div class="col-6">
           <button type="button" id="searchBtn" class="btn btn-primary btn-lg btn-block">Search</button>
-          
+
         </div>
       </div>
-    
+
       <hr class="d-md-none">
     </div>
     <div class="col-md-8">
@@ -111,7 +111,7 @@
 
 
       <br>
-     
+
     </div>
   </div>
 </div>
