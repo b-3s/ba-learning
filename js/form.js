@@ -14,53 +14,61 @@ $(document).ready(function(){
 
     // submit upload form  ----------------------------------------------------------------------
     $("#submit").click(function(e){
-        // alert("yeah in submit anonymous function");
-        e.preventDefault();
-        var formdata = new FormData();
-        formdata.append("fileToUpload", fileToUpload.files[0]);
-        formdata.append("topic", $("#topic").val());
-        formdata.append("author", $("#author").val());
-        formdata.append("description", $("#description").val());
-        // alert(formdata);
-        var request = new XMLHttpRequest();
-        request.open("POST", "php/pdoUpload.php", true);
-        request.onload = function(oEvent) {
-            if (request.status == 200) {
-                sendTopic();
-                // $("#topicTitle").text("uploaded!!");
-            } else {
-                // alert("not working");
-                $("#topicTitle").text("Error " + request.status + " occurred when trying to upload your file.<br \/>");
+            e.preventDefault();
+        if(validateForm()){
+            var formdata = new FormData();
+            formdata.append("fileToUpload", fileToUpload.files[0]);
+            formdata.append("topic", $("#topic").val());
+            formdata.append("author", $("#author").val());
+            formdata.append("description", $("#description").val());
+            // alert(formdata);
+            var request = new XMLHttpRequest();
+            request.open("POST", "php/pdoUpload.php", true);
+            request.onload = function(oEvent) {
+                if (request.status == 200) {
+                    sendTopic();
+                    // $("#topicTitle").text("uploaded!!");
+                } else {
+                    // alert("not working");
+                    $("#topicTitle").text("Error " + request.status + " occurred when trying to upload your file.<br \/>");
+                };
             };
-        };
-        request.send(formdata);
-        emptyFormInput();
+            request.send(formdata);
+            emptyFormInput();
+        }else{
+            alert ("All form fields required!!! Please fill in!");
+            emptyFormInput();
+        }
     });
 
     // MODAL submit upload form  ------------------------------------------------------------------
     $("#md-submit").click(function(e){
-        // alert("yeah in MD-submit anonymous function");
         e.preventDefault();
-        var formdata = new FormData();
-        formdata.append("fileToUpload", md_fileToUpload.files[0]);
-        formdata.append("topic", $("#md-topic").val());
-        formdata.append("author", $("#md-author").val());
-        formdata.append("description", $("#md-description").val());
-        // alert(formdata);
-        var request = new XMLHttpRequest();
-        request.open("POST", "php/pdoUpload.php", true);
-        request.onload = function(oEvent) {
-            if (request.status == 200) {
-                sendTopic();
-                // $("#topicTitle").text("uploaded!!");
-            } else {
-                // alert("not working");
-                $("#topicTitle").text("Error " + request.status + " occurred when trying to upload your file.<br \/>");
+        if(validateForm()){
+            var formdata = new FormData();
+            formdata.append("fileToUpload", md_fileToUpload.files[0]);
+            formdata.append("topic", $("#md-topic").val());
+            formdata.append("author", $("#md-author").val());
+            formdata.append("description", $("#md-description").val());
+            // alert(formdata);
+            var request = new XMLHttpRequest();
+            request.open("POST", "php/pdoUpload.php", true);
+            request.onload = function(oEvent) {
+                if (request.status == 200) {
+                    sendTopic();
+                    // $("#topicTitle").text("uploaded!!");
+                } else {
+                    // alert("not working");
+                    $("#topicTitle").text("Error " + request.status + " occurred when trying to upload your file.<br \/>");
+                };
             };
-        };
-        request.send(formdata);
-        emptyFormInput();
-        $('#uploadModal').modal('toggle');
+            request.send(formdata);
+            emptyFormInput();
+            $('#uploadModal').modal('toggle');
+        }else{
+            alert ("All form fields required!!! Please fill in!");
+            emptyFormInput();
+        }
     });
 
     /* end upload form ----------------------------------------  */
@@ -80,7 +88,23 @@ $(document).ready(function(){
 }); //-------------------------
 
 
-// empty form input fields
+
+// validate upload form fields
+function validateForm(){
+    let fileToUpload = $("#fileToUpload").val();
+    let topic = $("#topic").val();
+    let author = $("#author").val();
+    let description = $("#description").val();
+    if(fileToUpload != "" && topic != "" && author != "" && description != ""){
+        return true;
+    }else{
+        return false;
+    }
+
+}
+
+
+// empty upload form input fields
 function emptyFormInput(){
     $("form input, form textarea").val("");
     $(".custom-file-label").html("");

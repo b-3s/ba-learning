@@ -23,7 +23,6 @@ function sendTopic(){
 function sendSearchTopic(){
 
 	if($("#searchInput").val() != ""){
-		// alert ("searchInput: " + $("#searchInput").val());
 		let topictopic = $("#topicTitle").html();
 		let searchInput = $("#searchInput").val();
 
