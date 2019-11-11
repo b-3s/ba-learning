@@ -18,6 +18,7 @@ function sendTopic(){
 
 };
 
+
 // triggered by search_btn
 function sendSearchTopic(){
 

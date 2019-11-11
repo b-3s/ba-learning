@@ -4,14 +4,16 @@ $(document).ready(function(){
 
     window.addEventListener('resize', changeSearchUpload);
 
-    function changeSearchUpload(){
-        if(window.innerWidth < 768){
-            $("#searchUpload form").hide();
-            $("#smallWidthButtons").show();
-        }else{
-            $("#searchUpload form").show();
-            $("#smallWidthButtons").hide();
-        }
-    }
+}); //----------------------
 
-});
+
+
+function changeSearchUpload(){
+    if(window.innerWidth < 768){
+        $("#searchUpload form").hide();
+        $("#smallWidthButtons").show();
+    }else{
+        $("#searchUpload form").show();
+        $("#smallWidthButtons").hide();
+    }
+}
