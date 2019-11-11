@@ -1,33 +1,19 @@
 
 <?php
 
-echo "hallo";
-
 $alreadyStored = true;
 
-$topic = $_POST['topic'];
+$topic = htmlspecialchars($_POST['topic']);
 if ($topic === "AS-MBA"){
 	$topic = "asmba";
 }
 
-$uploaddir = 'uploads/' . $topic . '/';
-$uploadfile = $uploaddir . basename($_FILES['fileToUpload']['name']);
+$uploaddir = htmlspecialchars('uploads/' . $topic . '/');
+$uploadfile = htmlspecialchars($uploaddir . basename($_FILES['fileToUpload']['name']));
 
-// echo '<pre>';
-
-
-// $topic = $_POST['topic'];
-$author = $_POST['author'];
-$description = $_POST['description'];
-$fileToUpload = basename($uploadfile);
-
-// echo "<br>";
-// print_r ($fileToUpload);
-// echo "<br>";
-
-// print "</pre>";
-
-
+$author = htmlspecialchars($_POST['author']);
+$description = htmlspecialchars($_POST['description']);
+$fileToUpload = htmlspecialchars(basename($uploadfile));
 
 
 
@@ -49,37 +35,20 @@ if ($error[0] > 0) {
     print "Fehlercode: " .$error[1]."<br>".$error[2];
 }
 
-
-
-
-// if ($conn->connect_error) {
-//     die("Connection failed: " . $conn->connect_error);
-// }
-// echo "Connected successfully";
-
 // check whether the file is already in db
 $sqllook = "SELECT * FROM $topic WHERE filename = '$fileToUpload'";
 $result = $conn->query($sqllook);
 if ($result->rowCount() > 0) {  // todo prepared statement
     $alreadyStored = true;
-    // print_r ("\$alreadyStored: $alreadyStored");
-    // echo "<br>";
-    // echo "is schon vorhanden";
-    // echo "<br>";
 } else {
     $alreadyStored = false;
-    // echo "we can go on - file nicht vorhanden";
-    // echo "<br>";
     uploadFile();
 }
-// echo $sqllook;
 
 // insert into table
 if($alreadyStored === false){
    tableInsert();
 }
-
-
 
 $conn = null;
 
@@ -107,22 +76,6 @@ function uploadFile(){
     } else {
         header ("Location: http://localhost/ba-learning/index.php");
     }
-
-    // echo "<br> Weitere Debugging Informationen:";
-    // print_r($_FILES);
-
-
-    // echo "<br>";
-    // print_r ($uploadfile);
-    // echo "<br>";
-    // print_r($_POST['topic']);
-    // echo "<br>";
-    // print_r($_POST['author']);
-    // echo "<br>";
-    // print_r($_POST['description']);
-    // echo "<br>";
-    // print_r ("\$topic: $topic");
-    // echo "<br>";
 }
 // end upload file -------------------------------------------------
 

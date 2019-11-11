@@ -44,7 +44,7 @@ $(document).ready(function(){
     // MODAL submit upload form  ------------------------------------------------------------------
     $("#md-submit").click(function(e){
         e.preventDefault();
-        if(validateForm()){
+        if(validateModalForm()){
             var formdata = new FormData();
             formdata.append("fileToUpload", md_fileToUpload.files[0]);
             formdata.append("topic", $("#md-topic").val());
@@ -74,7 +74,7 @@ $(document).ready(function(){
     /* end upload form ----------------------------------------  */
 
 
-    // submit search form  ----------------------------------------------------------------------
+    // submit search form
     $("#search_btn").click(function(e){
         e.preventDefault();
         sendSearchTopic();
@@ -100,8 +100,21 @@ function validateForm(){
     }else{
         return false;
     }
-
 }
+
+// validate Modal upload form fields
+function validateModalForm(){
+    let fileToUpload = $("#md_fileToUpload").val();
+    let topic = $("#md-topic").val();
+    let author = $("#md-author").val();
+    let description = $("#md-description").val();
+    if(fileToUpload != "" && topic != "" && author != "" && description != ""){
+        return true;
+    }else{
+        return false;
+    }
+}
+
 
 
 // empty upload form input fields

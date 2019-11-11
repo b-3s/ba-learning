@@ -1,22 +1,21 @@
 <?php
 
-$searchTopic = $_POST['searchTopic'];
+$searchTopic = htmlspecialchars($_POST['searchTopic']);
 
-$pageTopic = $_POST['topics'];
+$pageTopic = htmlspecialchars($_POST['topics']);
 if ($pageTopic === "AS-MBA"){
 	$pageTopic = "asmba";
 }
 
 
 //SQL Query - show appropriate search files
-$sqllookup = "SELECT author, description, filename FROM $pageTopic Where description LIKE LOWER ('%$searchTopic%')";
+$sqllookup = "SELECT author, description, filename FROM $pageTopic Where author LIKE LOWER ('%$searchTopic%') OR description LIKE LOWER ('%$searchTopic%') OR filename LIKE LOWER ('%$searchTopic%')";
 
 
 // Verbindung aufnehmen
 try
 {
 	$dbh = new PDO ("mysql:dbname=ba-learning-db; host=localhost", "root", "");
-	//print "Verbindung erfolgreich hergestellt.";
 
 	$rueckgabe = $dbh->query($sqllookup);
 	$ergebnis = $rueckgabe->fetchAll(PDO::FETCH_ASSOC);

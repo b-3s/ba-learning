@@ -4,18 +4,22 @@
 - show files on appropriate page
 - upload with ajax call - page will be updated...
 - search form function
+- upload-form -> check whether form is properly filled in
+- security (htmlspecialchars)
 ----------------------------------------------------------------------
 
-- embed search form function on all sites
 
-- upload-form -> check whether form is properly filled in
+- search form: implement modal search form
+
+- security (prepared statements for avoiding sql injection ...)
 
 - screenwidth <768: search form and upload form in modal
 
 - fileupload - ALERT BOX if file is already in db or folder
 
+- form for embedding links
+
 - make files deletable (only for admin?)
 
 - create new page?
 
-- security (htmlspecialchars + prepared statements ...)
