@@ -45,27 +45,28 @@ if ($result->rowCount() > 0) {  // todo prepared statement
     uploadFile();
 }
 
-// insert into table
-if($alreadyStored === false){
-   tableInsert();
-}
-
 $conn = null;
 
 
 
 function tableInsert(){
     global $conn, $sql, $topic, $fileToUpload, $uploaddir, $author, $description, $error;
+
     $sql = "INSERT INTO $topic (filename, ptah, author, description)
-    VALUES ('$fileToUpload', '$uploaddir', '$author', '$description')";
+    VALUES (:fileToUpload, :uploaddir, :author, :description)";
 
-    if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
-    } else {
-        print "Fehlercode: " .$error[1]."<br>".$error[2];
-    }
+    $input = $conn->prepare($sql);
 
+    $input->bindParam(':fileToUpload', $fileToUpload, PDO::PARAM_STR, 300);
+    $input->bindParam(':uploaddir', $uploaddir, PDO::PARAM_STR, 300);
+    $input->bindParam(':author', $author, PDO::PARAM_STR, 100);
+    $input->bindParam(':description', $description, PDO::PARAM_STR, 500);
+
+    $input->execute();
+
+    $conn = null;
 }
+
 
 // upload file -----------------------------------------------------S
 function uploadFile(){
@@ -73,6 +74,7 @@ function uploadFile(){
     print_r("\$uploadfile: $uploadfile <br>");
     if (move_uploaded_file($_FILES['fileToUpload']['tmp_name'], $uploadfile)) {
         echo "Datei ist valide und wurde erfolgreich hochgeladen.\n";
+        tableInsert();
     } else {
         header ("Location: http://localhost/ba-learning/index.php");
     }

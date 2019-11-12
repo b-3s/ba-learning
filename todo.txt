@@ -8,10 +8,13 @@
 - security (htmlspecialchars)
 ----------------------------------------------------------------------
 
+- security (prepared statements for avoiding sql injection ...)
+
+- only jpg, gif, png, doc, docx, odt, pdf files allowed
+
+- search form: search in defined topics and search in all topics -> all tables?
 
 - search form: implement modal search form
-
-- security (prepared statements for avoiding sql injection ...)
 
 - screenwidth <768: search form and upload form in modal
 
