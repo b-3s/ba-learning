@@ -73,7 +73,7 @@
             <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
           </div>
           <div class="custom-file">
-            <input type="file" class="custom-file-input" name="fileToUpload" id="fileToUpload" aria-describedby="inputGroupFileAddon01">
+            <input type="file" class="custom-file-input" name="fileToUpload" id="fileToUpload" aria-describedby="inputGroupFileAddon01" accept=".doc,.docx,.pdf,.png,.jpg,.jpeg">
             <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
           </div>
         </div>
@@ -150,7 +150,7 @@
                 <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
               </div>
               <div class="custom-file">
-                <input type="file" class="custom-file-input" name="md_fileToUpload" id="md_fileToUpload" aria-describedby="inputGroupFileAddon01">
+                <input type="file" class="custom-file-input" name="md_fileToUpload" id="md_fileToUpload" aria-describedby="inputGroupFileAddon01" accept=".doc,.docx,.pdf,.png,.jpg,.jpeg">
                 <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
               </div>
             </div>

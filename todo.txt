@@ -6,11 +6,11 @@
 - search form function
 - upload-form -> check whether form is properly filled in
 - security (htmlspecialchars)
+- security (prepared statements for avoiding sql injection ...)
 ----------------------------------------------------------------------
 
-- security (prepared statements for avoiding sql injection ...)
 
-- only jpg, gif, png, doc, docx, odt, pdf files allowed
+- only jpg, jpeg, png, pdf files allowed - done with html "accept"-attribute -> todo: jquery check file extensions (possibility to set on server which files allowed to upload?)
 
 - search form: search in defined topics and search in all topics -> all tables?
 
