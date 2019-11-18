@@ -73,7 +73,7 @@
             <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
           </div>
           <div class="custom-file">
-            <input type="file" class="custom-file-input" name="fileToUpload" id="fileToUpload" aria-describedby="inputGroupFileAddon01" accept=".doc,.docx,.pdf,.png,.jpg,.jpeg">
+            <input type="file" class="custom-file-input" name="fileToUpload" id="fileToUpload" aria-describedby="inputGroupFileAddon01" accept="application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/pdf, image/png, image/jpeg, text/plain">
             <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
           </div>
         </div>
