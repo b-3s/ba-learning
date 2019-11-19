@@ -48,8 +48,9 @@
 
 <div class="container" id="containerOne">
   <div class="row">
-    <div class="col-md-12" id="showFile">
-      <embed src="php/uploads/gkp/muhlau_topo04122014.pdf" style="width:100%; height:100vh;">
+    <div class="col-md-12" id="showFile" style="height:1000px;">
+      <button id="rotateBtn" class="btn btn-primary">rotate</button>
+      <img src="php/uploads/gkl/DSC_0005.JPG" id="image" style="width:300px; height:300px;">
     </div>
   </div>
 </div>

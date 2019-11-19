@@ -24,6 +24,14 @@
 	color: #343a40;
 }
 
+#rotateBtn{
+	position: absolute;
+	z-index: 10;
+	left: 20px;
+	top: 20px;
+
+}
+
 
 /*media queries*/
 
