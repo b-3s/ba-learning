@@ -33,6 +33,13 @@
 }
 
 
+/* modal */
+.modal {
+	width: 100vw;
+	max-width: 320px;
+}
+
+
 /*media queries*/
 
 @media only screen and (min-width: 768px) {
@@ -50,6 +57,10 @@
 		max-width: 720px;
 	}
 
+	#containerOne .h1, h1{
+		font-size: 1.5rem;
+	}
+
 	.navbar {
 		position: absolute;
 		z-index: 100;
@@ -61,7 +72,7 @@
 	}
 
 	.jumbotron {
-		padding: 1rem 1rem;
+		padding: 0.8rem 0.8rem;
 	}
 
 }

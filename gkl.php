@@ -114,16 +114,15 @@
 
       <hr class="d-md-none">
     </div>
+
     <div class="col-md-8">
       <h2 id="topicTitle">GKL</h2>
-      <div id="dataFiles"></div>
-      <!-- show appropriate Files on page-->
-
-
-
+      <div id="dataFiles">
+        <!-- show appropriate Files on page-->
+      </div>
       <br>
-
     </div>
+
   </div>
 </div>
 
