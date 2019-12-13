@@ -1,12 +1,12 @@
 $(document).ready(function(){
 
-    changeSearchUpload();
+  changeSearchUpload();
 
-    window.addEventListener('resize', changeSearchUpload);
+  window.addEventListener('resize', changeSearchUpload);
 
 
-    //show.php -> rotate image
-    let angle = 0;
+  //show.php -> rotate image
+  let angle = 0;
 	$("#rotateBtn").click(function(){
   		angle++;
   		if(angle == 1){
@@ -20,7 +20,14 @@ $(document).ready(function(){
 	});
 
 
-}); //----------------------
+  //click file links on appr pages
+  $("td a").click(function(event){
+    event.preventDefault();
+    alert("hello");
+  })
+
+
+}); //----------------------------------------------------
 
 
 

@@ -10,6 +10,8 @@ function sendTopic(){
 	  	url: "php/loadApprFiles.php",
 	  	data: { topics: topictopic },
 	   	success: function(result){
+	   		// document.location = "show_pdf.php";
+	   		// $("#showFile").html(result);
 	    	$("#dataFiles").html(result);
 	 	}
 	});

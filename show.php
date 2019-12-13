@@ -55,7 +55,7 @@
   </div>
 </div>
 
-<div class="jumbotron text-center" style="margin-bottom:0">
+<div id="footer" class="jumbotron text-center" style="margin-bottom:0">
   <p>Footer</p>
 </div>
 

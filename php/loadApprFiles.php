@@ -36,6 +36,7 @@ try
 		print $inhalt['description'];
 		print '</td>';
 		print '<td>';
+		// print pathinfo($inhalt['filename'])['extension']; // show filetype(extension)
 		print "<a href=\"php/uploads/".$pageTopic."/".$inhalt['filename']."\"".">".$inhalt['filename']."</a><br>";
 		print '</td>';
 		print '</tr>';
