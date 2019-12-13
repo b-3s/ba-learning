@@ -16,9 +16,29 @@ function sendTopic(){
 	 	}
 	});
 
-
-
 };
+
+
+
+function showApprFileViewerSJ(){
+
+    topic = $("#topicTitle").html();
+    alert("topic: " + topic);
+    file = $(event.target).html();
+    alert("file : " + file);
+
+	$.ajax({
+	  	method: "POST",
+	  	url: "php/showApprPdfFiles.php",
+	  	data: { topics: topic, files: file },
+	   	success: function(result){
+	   		document.location = "show_viewerjs.php";
+	   		$("#showFile").html(result);
+	 	}
+	});
+
+}
+
 
 
 // triggered by search_btn

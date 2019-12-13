@@ -11,6 +11,7 @@
   <script src="js/form.js"></script>
   <script src="js/ajax_sendTopic.js"></script>
   <script src="js/manipulation.js"></script>
+  <script src="js/showPdfFiles.js"></script>
   <link rel="stylesheet" href="css/root.css">
   <style>
   .fakeimg {
@@ -188,7 +189,7 @@
 <!-- --------------------------- END OF MODALS ----------------------------------------------- -->
 
 
-<div class="jumbotron text-center" style="margin-bottom:0">
+<div id="footer" class="jumbotron text-center" style="margin-bottom:0">
   <p>Footer</p>
 </div>
 

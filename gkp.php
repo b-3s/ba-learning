@@ -12,6 +12,7 @@
   <script src="js/form.js"></script>
   <script src="js/ajax_sendTopic.js"></script>
   <script src="js/manipulation.js"></script>
+  <script src="js/showPdfFiles.js"></script>
   <style>
   .fakeimg {
     height: 200px;

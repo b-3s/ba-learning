@@ -73,7 +73,6 @@ function uploadFile(){
     global $uploadfile, $topic;
     print_r("\$uploadfile: $uploadfile <br>");
     if (move_uploaded_file($_FILES['fileToUpload']['tmp_name'], $uploadfile)) {
-        echo "Datei ist valide und wurde erfolgreich hochgeladen.\n";
         tableInsert();
     } else {
         header ("Location: http://localhost/ba-learning/index.php");

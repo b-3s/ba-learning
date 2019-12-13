@@ -11,6 +11,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="js/form.js"></script>
   <script src="js/manipulation.js"></script>
+  <script src="js/showPdfFiles.js"></script>
   <style>
   .fakeimg {
     height: 200px;

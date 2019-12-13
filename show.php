@@ -12,6 +12,7 @@
   <script src="js/form.js"></script>
   <script src="js/ajax_sendTopic.js"></script>
   <script src="js/manipulation.js"></script>
+  <script src="js/showPdfFiles.js"></script>
   <style>
   .fakeimg {
     height: 200px;
@@ -48,9 +49,9 @@
 
 <div class="container" id="containerOne">
   <div class="row">
-    <div class="col-md-12" id="showFile" style="height:1000px;">
+    <div class="col-md-12" id="showFile" style="overflow:auto">
       <button id="rotateBtn" class="btn btn-primary">rotate</button>
-      <img src="php/uploads/gkl/DSC_0005.JPG" id="image" style="width:300px; height:300px;">
+      <img src="php/uploads/gkl/DSC_0005.JPG" id="image" style="width:100%">
     </div>
   </div>
 </div>

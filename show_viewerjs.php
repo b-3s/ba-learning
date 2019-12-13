@@ -12,6 +12,7 @@
   <script src="js/form.js"></script>
   <script src="js/ajax_sendTopic.js"></script>
   <script src="js/manipulation.js"></script>
+  <script src="js/showPdfFiles.js"></script>
   <style>
   .fakeimg {
     height: 200px;
@@ -50,7 +51,7 @@
   <div class="row">
     <div class="col-md-12" id="showFile" style="height:100%;">
 
-      <iframe src="/ViewerJS/#../ba-learning/php/uploads/gkl/gklh_somatologie_25_01_2019.pdf" style="height:100vh; width:100%"></iframe>
+<!--       <iframe src="/ViewerJS/#../ba-learning/php/uploads/gkl/gklh_somatologie_25_01_2019.pdf" style="height:100vh; width:100%"></iframe> -->
 
     </div>
   </div>

@@ -1,6 +1,9 @@
 $(document).ready(function(){
 
+
   changeSearchUpload();
+
+  // checkLocation();
 
   window.addEventListener('resize', changeSearchUpload);
 
@@ -20,11 +23,6 @@ $(document).ready(function(){
 	});
 
 
-  //click file links on appr pages
-  $("td a").click(function(event){
-    event.preventDefault();
-    alert("hello");
-  })
 
 
 }); //----------------------------------------------------
@@ -40,3 +38,8 @@ function changeSearchUpload(){
         $("#smallWidthButtons").hide();
     }
 }
+
+
+
+
+

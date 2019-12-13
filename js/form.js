@@ -83,7 +83,9 @@ $(document).ready(function(){
 
 
     // defined in ajax_sendTopic.js --> send topic to server, get pagecontent and show it in #dataFiles
-    sendTopic();
+    if(window.location.pathname != "/ba-learning/show_viewerjs.php"){
+        sendTopic();
+    }
 
 }); //-------------------------
 
