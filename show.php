@@ -51,7 +51,7 @@
   <div class="row">
     <div class="col-md-12" id="showFile" style="overflow:auto">
       <button id="rotateBtn" class="btn btn-primary">rotate</button>
-      <img src="php/uploads/gkl/DSC_0005.JPG" id="image" style="width:100%">
+      <img src="php/uploads/gkl/DSC_0005.JPG" id="image" style="max-width:100%; height:auto;">
     </div>
   </div>
 </div>
