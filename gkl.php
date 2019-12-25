@@ -27,6 +27,7 @@
   <p>share your skills with your classmates...</p>
 </div>
 
+<!-- NAVIGATION -->
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
   <a class="navbar-brand" href="#">categories:</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">

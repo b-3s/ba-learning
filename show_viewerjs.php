@@ -9,9 +9,9 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <script src="js/form.js"></script>
+<!--   <script src="js/form.js"></script>
   <script src="js/ajax_sendTopic.js"></script>
-  <script src="js/manipulation.js"></script>
+  <script src="js/manipulation.js"></script> -->
   <script src="js/showPdfFiles.js"></script>
   <style>
   .fakeimg {
@@ -20,14 +20,14 @@
   }
   </style>
 </head>
-<body>
+<body onload="showApprFileViewerSJ()">
 
-<div class="jumbotron text-center" style="margin-bottom:0">
+<!-- <div class="jumbotron text-center" style="margin-bottom:0">
   <h1>BA - learning</h1>
   <p>share your skills with your classmates...</p>
-</div>
+</div> -->
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="position: relative">
   <a class="navbar-brand" href="#">categories:</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
     <span class="navbar-toggler-icon"></span>
@@ -47,11 +47,11 @@
   </div>
 </nav>
 
-<div class="container" id="containerOne">
+<div class="container" id="containerOne" style="margin-top: 30px;">
   <div class="row">
     <div class="col-md-12" id="showFile" style="height:100%;">
 
-<!--       <iframe src="/ViewerJS/#../ba-learning/php/uploads/gkl/gklh_somatologie_25_01_2019.pdf" style="height:100vh; width:100%"></iframe> -->
+      <!-- <iframe src="/ViewerJS/#../ba-learning/php/uploads/gkl/rettenbachtal_topo.pdf" style="height:100vh; width:100%"></iframe> -->
 
     </div>
   </div>
