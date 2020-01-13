@@ -1,6 +1,8 @@
 
 <?php
 
+require_once ('../conf/conyou.php');
+
 $alreadyStored = true;
 
 $topic = htmlspecialchars($_POST['topic']);
@@ -26,7 +28,7 @@ $password = "";
 $dbname = "ba-learning-db";
 
 // Create connection
-$conn = new PDO("mysql:host=localhost; dbname=ba-learning-db", $username, $password);
+$conn = new PDO(MYSQL_SERVER, MYSQL_BENUTZER, "");
 
 // Check connection
 $error = $conn->errorInfo();

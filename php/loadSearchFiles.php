@@ -1,5 +1,7 @@
 <?php
 
+require_once ('../conf/conyou.php');
+
 $searchTopic = htmlspecialchars($_POST['searchTopic']);
 
 $pageTopic = htmlspecialchars($_POST['topics']);
@@ -15,7 +17,7 @@ $sqllookup = "SELECT author, description, filename FROM $pageTopic Where author 
 // Verbindung aufnehmen
 try
 {
-	$dbh = new PDO ("mysql:dbname=ba-learning-db; host=localhost", "root", "");
+	$dbh = new PDO (MYSQL_SERVER, MYSQL_BENUTZER, "");
 
 	$rueckgabe = $dbh->query($sqllookup);
 	$ergebnis = $rueckgabe->fetchAll(PDO::FETCH_ASSOC);
