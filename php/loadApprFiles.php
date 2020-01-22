@@ -1,5 +1,7 @@
 <?php
 
+require_once ('../conf/conyou.php');
+
 $pageTopic = htmlspecialchars($_POST['topics']);
 if ($pageTopic === "AS-MBA"){
 	$pageTopic = "asmba";
@@ -12,7 +14,7 @@ $sqllookup = "SELECT author, filename, description FROM $pageTopic";
 // Verbindung aufnehmen
 try
 {
-	$dbh = new PDO ("mysql:dbname=ba-learning-db; host=localhost", "root", "");
+	$dbh = new PDO (MYSQL_SERVER, MYSQL_BENUTZER, "");
 
 	$rueckgabe = $dbh->query($sqllookup);
 	$ergebnis = $rueckgabe->fetchAll(PDO::FETCH_ASSOC);
@@ -48,6 +50,8 @@ try
 }
 catch(PDOException $e) {
 	print $e->getMessage();
+	echo MYSQL_BENUTZER." ";
+	echo MYSQL_SERVER;
 }
 
 
